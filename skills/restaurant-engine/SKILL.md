@@ -1,6 +1,6 @@
 ---
 name: restaurant-ai-engine
-description: Automated lead generation and AI food photo enhancement engine for restaurants. Scrapes Google Maps for restaurants with poor photography, filters images via Gemini Vision, generates premium food photos using Nano Banana Pro, and manages everything through Airtable.
+description: This skill should be used when the user wants to "run the restaurant engine", "find restaurant leads", "enhance food photos", "scrape restaurants", "generate food photos with AI", "restaurant outreach", or needs to identify restaurants with bad photography and replace them with AI-generated premium food images.
 ---
 
 # Restaurant AI Refresh Engine
@@ -9,7 +9,7 @@ description: Automated lead generation and AI food photo enhancement engine for 
 
 Two flows that work together to find restaurants with bad food photography, enhance their images with AI, and create outreach-ready assets.
 
-**Flow 1 — Prospecting:** Scrapes Google Maps → Gemini Vision filters food images → Uploads leads to Airtable
+**Flow 1 — Prospecting:** Scrapes Google Maps → Gemini Vision filters food images → Uploads leads to Airtable  
 **Flow 2 — Photo Editing:** Pulls Food leads from Airtable → Generates 2 premium shots with Nano Banana Pro via Gemini API → Uploads results back to Airtable
 
 ---

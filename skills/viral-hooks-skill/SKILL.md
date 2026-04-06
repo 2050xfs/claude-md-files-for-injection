@@ -1,6 +1,6 @@
 ---
 name: viral-hooks-content-creator
-description: Use this skill whenever the user wants to create social media content, write hooks, captions, video scripts, reels, TikToks, Instagram posts, or any short-form content. Also trigger when the user mentions content ideas, viral hooks, engagement, social media strategy, content calendars, batch content creation, or asks for help writing opening lines for videos. This skill contains a massive library of 1000+ proven viral hook templates across 8 categories AND a complete 7-factor viral content framework covering topic selection, hooks, value, script angles, CTAs, filming formats, and editing style. Use it even if the user just says "help me with content" or "I need post ideas" or "what should I post about" — this skill will dramatically improve the output.
+description: This skill should be used when the user wants to "write a hook", "create social media content", "write a TikTok script", "write a Reel", "write captions", "create a content calendar", "batch content", "viral hooks", "write an opening line", "help me with content", "what should I post", or needs short-form content for Instagram, TikTok, YouTube Shorts, or any social platform. Contains 1000+ proven viral hook templates across 8 categories and a 7-factor viral content framework.
 ---
 
 # Viral Hooks Content Creator

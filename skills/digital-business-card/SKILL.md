@@ -1,6 +1,6 @@
 ---
 name: Digital Business Card Builder
-description: Builds and deploys a two-layer premium digital identity system — a 3D interactive business card pass (utility) + a cinematic GSAP-animated brand story landing page — from a single JSON data file. Ships to Vercel in one command.
+description: This skill should be used when the user wants to "create a digital business card", "build a digital card", "make a business card website", "digital identity", "interactive business card", "brand landing page", "link in bio", or needs a premium deployable digital card + brand page that ships to Vercel.
 ---
 
 # Digital Business Card Builder
@@ -70,7 +70,7 @@ Both layers share a single `cards.json` data file. The project ships to a live V
    - [ ] "Return" button in Landing nav returns to Pass
    - [ ] All contact links, portfolio links, and social icons work
 
-6. **Confirm with user before deploying**
+6. **⚠️ CONFIRM WITH USER before deploying**
 
 7. **Deploy to Vercel**
    ```bash
@@ -121,17 +121,17 @@ Both layers share a single `cards.json` data file. The project ships to a live V
 
 | Field | Type | Required | Notes |
 | :--- | :--- | :--- | :--- |
-| `id` | string | Yes | URL-safe slug, e.g. `"edgar-upflex"` |
-| `name` | string | Yes | Full display name |
-| `organization` | string | Yes | Company name |
-| `title` | string | Yes | Job title |
-| `phone` | string | Yes | Digits only, no formatting |
-| `email` | string | Yes | |
-| `url` | string | Yes | Full `https://` URL |
-| `socials` | object | Yes | Keys are network names (`linkedin`, `instagram`, etc.), values are full URLs |
-| `template_id` | string | Yes | Currently: `"digital-pass-minimal"` |
-| `value_props` | array | Yes | Exactly 3 objects: `{ title, description }` |
-| `portfolio` | array | No | 1–5 objects: `{ name, url }` |
+| `id` | string | ✅ | URL-safe slug, e.g. `"edgar-upflex"` |
+| `name` | string | ✅ | Full display name |
+| `organization` | string | ✅ | Company name |
+| `title` | string | ✅ | Job title |
+| `phone` | string | ✅ | Digits only, no formatting |
+| `email` | string | ✅ | |
+| `url` | string | ✅ | Full `https://` URL |
+| `socials` | object | ✅ | Keys are network names (`linkedin`, `instagram`, etc.), values are full URLs |
+| `template_id` | string | ✅ | Currently: `"digital-pass-minimal"` |
+| `value_props` | array | ✅ | Exactly 3 objects: `{ title, description }` |
+| `portfolio` | array | ➖ | 1–5 objects: `{ name, url }` |
 
 **Example `cards.json`:**
 ```json

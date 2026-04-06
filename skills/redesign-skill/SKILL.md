@@ -1,6 +1,6 @@
 ---
 name: redesign-existing-projects
-description: Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.
+description: This skill should be used when the user wants to "improve this design", "upgrade the UI", "refine this component", "polish this page", "audit this design", "this looks AI-generated", "incremental redesign", or needs surgical design upgrades to an existing project without breaking functionality.
 ---
 
 # Redesign Skill

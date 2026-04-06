@@ -1,9 +1,9 @@
 ---
 name: talking-head-video
-description: Full talking head video pipeline — hooks, avatar, environment, image gen, video gen, Airtable logging. One command, full production.
+description: This skill should be used when the user wants to "make a talking head video", "create an AI video", "generate a video with an avatar", "make a UGC video", "talking head", "pick an avatar", "pick an environment", "generate a video ad", or says "let's make a video". Runs the full pipeline — avatar + environment selection, image gen via fal.ai, video gen via Kling/Veo/Sora, Airtable logging.
 ---
 
-# Talking Head Video — Full Pipeline
+🎬 Talking Head Video — Full Pipeline
 Path: /skills/video/talking-head-video/SKILL.md
 You are producing a full talking head video from brief to final video.
 Run this pipeline automatically when the user invokes this skill. Do not skip steps. Do not combine steps. Stop and wait at every approval gate.
@@ -85,7 +85,7 @@ Assemble the final image prompt by combining:
 Store full prompt as [IMAGE_PROMPT].
 
 STEP 3 — GENERATE IMAGE
-Call fal.ai using curl with the FAL_KEY from ~/.claude/settings.json:
+Call fal.ai using curl with the FAL_KEY from .agent/.env:
 
 ```
 POST https://fal.run/fal-ai/nano-banana-pro
@@ -109,8 +109,8 @@ Retrieve images[0].url from the result. Store as [GENERATED_IMAGE_URL].
 This is non-negotiable. Every time an image is generated — embed it. No links. No "click here."
 
 STEP 4 — LOG TO AIRTABLE (ALL THREE TABLES)
-Read AIRTABLE_BASE_ID from the user's ~/.claude/settings.json env settings.
-Use curl with the AIRTABLE_API_KEY from ~/.claude/settings.json.
+Read AIRTABLE_BASE_ID from .agent/.env.
+Use curl with the AIRTABLE_API_KEY from .agent/.env.
 Log to ALL THREE tables every time. Do not skip any.
 
 **4A — Projects table (ALWAYS)**
@@ -175,7 +175,7 @@ Tell the user:
 - Or tell me what to adjust and I'll regenerate"
 
 If adjustments requested → update [IMAGE_PROMPT] accordingly, regenerate, update the existing Airtable record with the new image, loop back
-If DONE → skip to the final confirmation. Say: "Image generated and logged to Airtable. Your avatar is ready to use any time." Then stop.
+If DONE → skip to the final confirmation. Say: "✅ Image generated and logged to Airtable. Your avatar is ready to use any time." Then stop.
 If VIDEO → proceed to Step 6 (Video Brief)
 
 Do NOT proceed until the user explicitly chooses.
@@ -269,7 +269,7 @@ Start frame: [GENERATED_IMAGE_URL]
 Store as [VIDEO_PROMPT].
 
 STEP 10 — GENERATE VIDEO
-Call fal.ai using curl with the FAL_KEY from ~/.claude/settings.json:
+Call fal.ai using curl with the FAL_KEY from .agent/.env:
 
 ```
 POST https://fal.run/[VIDEO_ENDPOINT]
@@ -304,26 +304,8 @@ Video Generation 1 | [GENERATED_VIDEO_URL]
 
 Confirm to the user:
 
-"Your talking head video is complete and logged to Airtable. Hook, image, and video are all ready."
+"✅ Your talking head video is complete and logged to Airtable. Hook, image, and video are all ready."
 
-Key Defaults
-Setting | Default
-Image model | fal-ai/nano-banana-pro
-Video model | Kling 3.0 Pro
-Aspect ratio | 9:16 vertical
-Resolution | 2K images
-Airtable table | Projects
+## Additional Resources
 
-Airtable Fields Reference
-Ad Name, Product Name, Image Prompt, Image Generator, Image Status, Generated Image 1, Video Prompt, Video Generator, Video Status, Video Generation 1
-
-File Path Reference
-Asset | Path
-This skill | /skills/video/talking-head-video/SKILL.md
-Hooks library | /viral-hooks-skill/references/hooks-library.md
-Avatar skills | /skills/ai-avatars/[name]/SKILL.md
-Custom avatar skill | /skills/ai-avatars/custom/SKILL.md
-Custom avatar log | /skills/ai-avatars/[name]/SKILL.md
-Environment skills | /skills/ai-environments/[name]/SKILL.md
-Custom environment skill | /skills/ai-environments/custom/SKILL.md
-Custom environment log | /skills/ai-environments/[name]/SKILL.md
+- **`references/api-reference.md`** — All curl call payloads, Airtable field mappings, cost rates, model endpoints, and file path reference. Load this when executing any API step.

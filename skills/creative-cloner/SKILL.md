@@ -1,6 +1,6 @@
 ---
 name: Creative Cloner
-description: A complete automated workflow for analyzing real videos, generating stable starting frames, creating AI video clips with Kie.ai (Kling 2.6 / NanoBanana Pro), tracking progress in Airtable, and combining the final outputs with FFmpeg.
+description: This skill should be used when the user wants to "clone a video", "recreate this video style", "analyze this video", "clone this content", "extract the scene from this video", "match this video format", or needs to reverse-engineer a video's style and recreate it with a different subject using Kie.ai and Gemini.
 ---
 
 # Creative Cloner Workflow

@@ -1,6 +1,6 @@
 ---
 name: Aesthetic Frontend Redesign
-description: Transforms generic templated websites into high-end, bespoke digital experiences using custom design systems, CSS animations, and AI-generated premium photography.
+description: This skill should be used when the user wants to "redesign this site", "make it look premium", "full redesign", "bespoke design", "this looks too generic", "make it look like a high-end agency built it", "complete visual overhaul", or asks for a from-scratch aesthetic transformation using custom design systems and CSS animations.
 ---
 
 # Aesthetic Frontend Redesign

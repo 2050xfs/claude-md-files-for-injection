@@ -1,10 +1,6 @@
 ---
 name: ollama-open-webui
-description: >
-  Deploy a local ChatGPT-like interface using Ollama + Open WebUI via Docker.
-  Runs any open-source LLM (Llama 2, Code Llama, Mistral, etc.) fully on your
-  machine — no API keys, no data leaving your device. Extracted from the YouTube
-  tutorial: https://www.youtube.com/watch?v=qgMbU_H-fbQ
+description: This skill should be used when the user wants to "set up Ollama", "run a local LLM", "local ChatGPT", "run AI locally", "no API key LLM", "private AI", "Open WebUI", "run Llama locally", "run Mistral locally", or needs to deploy a fully local AI chat interface using Docker.
 allowed-tools: Read, Bash, Write, Edit
 ---
 
@@ -246,7 +242,7 @@ Browser → http://localhost:3000 → Open WebUI → Ollama → LLM
 
 ## Source
 
-**Video:** https://www.youtube.com/watch?v=qgMbU_H-fbQ
-**Extracted:** 2026-04-04 via video-to-action skill + Gemini analysis
-**Open WebUI repo:** https://github.com/open-webui/open-webui
+**Video:** https://www.youtube.com/watch?v=qgMbU_H-fbQ  
+**Extracted:** 2026-04-04 via video-to-action skill + Gemini analysis  
+**Open WebUI repo:** https://github.com/open-webui/open-webui  
 **Ollama:** https://ollama.ai

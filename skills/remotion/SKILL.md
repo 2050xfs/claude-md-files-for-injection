@@ -1,6 +1,6 @@
 ---
 name: remotion-video-creator
-description: Generates programmatic, code-driven videos using Remotion + React + TypeScript inside Claude Code. Covers full project setup, 5 production-ready prompt patterns (Education Explainer, Product Demo, Google Reviews, Avatar Overlays, Data Viz Dashboard), all core Remotion APIs, animation patterns, audio, captions, charts, and rendering. Always deploys a live Vercel preview. Integrates with the creative-cloner pipeline for hybrid AI+code video production.
+description: This skill should be used when the user wants to "make a Remotion video", "create a programmatic video", "code-driven video", "animated video with React", "explainer video", "product demo video", "data visualization video", "avatar overlay video", "Google Reviews video", or needs to build and deploy a video using Remotion + React + TypeScript to Vercel.
 ---
 
 # Remotion Video Creator
@@ -288,14 +288,14 @@ Remotion handles what Kling/NanaBanana can't — and vice versa:
 
 | Use Case | Remotion | Kling/NanaBanana |
 |----------|----------|-----------------|
-| Data dashboards | Yes | No |
-| Text animations / captions | Yes | No |
-| Charts and graphs | Yes | No |
-| Slide-style explainers | Yes | No |
-| Product UI demos | Yes | No |
-| Realistic motion (people) | No | Yes |
-| Style transfer from reference | No | Yes |
-| Image-to-video animation | No | Yes |
+| Data dashboards | ✅ | ❌ |
+| Text animations / captions | ✅ | ❌ |
+| Charts and graphs | ✅ | ❌ |
+| Slide-style explainers | ✅ | ❌ |
+| Product UI demos | ✅ | ❌ |
+| Realistic motion (people) | ❌ | ✅ |
+| Style transfer from reference | ❌ | ✅ |
+| Image-to-video animation | ❌ | ✅ |
 
 **Hybrid workflow:** Use Remotion for title cards, lower-thirds, data overlays, intros/outros. Use Kling for hero clips. Stitch together with `ffmpeg-static` via the `video-combiner` skill.
 
